@@ -191,6 +191,7 @@
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
         active = false;
+        $("#time").html("停止");
         
         
     }
@@ -205,6 +206,7 @@
         
     }
     
+    
  
     // 繰り返し実行する処理
     function timer(){  
@@ -212,7 +214,7 @@
             var time = parseInt((new Date() - startTime)/1000);
             var rest = period - time;
             $("#time").html("経過時間：" +
-            time);
+            time + "秒");
             $("#remain").html("#残り時間： " + rest);
             analog(rest);
         }
